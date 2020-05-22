@@ -5,7 +5,7 @@
   "scripts": {
     "start": "bundle exec jekyll serve",
     "build": "bundle exec jekyll build",
-    "deploy": "gulp build && bundle exec jekyll build && s3-website deploy _site",
+    "build:watch": "bundle exec jekyll build --watch",
     "gulp": "gulp"
   },
   "repository": {

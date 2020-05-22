@@ -24,6 +24,8 @@ ol {
 
     font-size: 1.1em;
 
+    padding-inline-start: 40px;
+
     @media (min-width: $mq-small) {
       font-size: 1.25em;
     }
@@ -52,6 +54,8 @@ ol {
     @extend %no-list-style;
 
     counter-reset: li;
+
+    padding-inline-start: 40px;
 
     & > li:before {
       content: counter(li) ".";
