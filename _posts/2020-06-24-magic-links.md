@@ -60,7 +60,7 @@ The biggest difference between the two is that a stateful implementation require
 ### Stateless Implementations
 
 - Advantages: No datastore is required. Fast token generation and verification.
-- Disadvantage: The token implementation logic is more complex. Difficulty of revoking issued tokens once issued.
+- Disadvantage: The token implementation logic is more complex. Difficulty of revoking issued tokens.
 
 ## Magic Links at Quartz.
 
