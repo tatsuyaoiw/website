@@ -27,7 +27,7 @@ The overall communication flow between the user and the system is as follows.
 
 ## Implementing the Magic Links
 
-The core of the implementation of magic links is **#2 token generation** and **#4 token validation** part. These implementations fall into two broad categories, **stateful implementations** and **stateless implementations**.
+The core of the implementation of magic links are **#2 token generation** and **#4 token validation** parts. These implementations fall into two broad categories, **stateful implementations** and **stateless implementations**.
 
 ## Stateful Implementations
 
