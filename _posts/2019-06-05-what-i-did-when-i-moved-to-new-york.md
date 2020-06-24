@@ -2,8 +2,8 @@
 layout: post
 title: ニューヨークに移住するときにやったこと
 date: 2019-06-06 22:08
-description: aaa
 published: true
+image: /assets/images/times-square.jpg
 author: Tatsuya Oiwa
 tags: [Japanese]
 ---
