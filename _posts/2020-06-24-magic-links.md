@@ -21,9 +21,9 @@ I just recently implemented this magic links. Here's how it actually works 👇.
 The overall communication flow between the user and the system is as follows.
 
 1. *User*: Press the Send Magic Link button.
-2. *System* : Upon receiving a request from a user, the system generates an authentication token that is unique to that user and includes the generated token in the URL of the magic link and sends it to the user by email.
+2. *System* : Generate an authentication token that is unique to that user and includes the generated token in the URL of the magic link and send it to the user by email.
 3. *User* : Click on the magic link URL from the email inbox.
-4. *System*: Extracts and verifies the token in the magic link and returns the authenticated status to the user if the token is valid.
+4. *System*: Extract and verify the token in the magic link and return the authenticated status to the user if the token is valid.
 
 ## Implementing the Magic Links
 
