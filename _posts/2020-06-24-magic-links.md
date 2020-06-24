@@ -8,44 +8,62 @@ author: Tatsuya Oiwa
 tags: [English]
 ---
 
-When creating a login feature on a website, a typical implementaion is to have a form with  a username and password, or to integrate with external platforms such as Google and Facebook using [OAuth](https://oauth.net/) authentication mechanism.
+When creating a login feature on a website, a typical implementaion is to have a form with a combination of a username and password, or to integrate with external platforms such as Google and Facebook using [OAuth](https://oauth.net/) authentication mechanism.
 
-There is also an alternative way to do it, that is, **Passwordless Login**. Passwordless login is, as the name suggests, a method allowing the user to login without entering their password. For example, a website can send an email or SMS with a verification code to the user to let them logged in.
+There is also an alternative way called **Passwordless Login**. A passwordless login is, as the name suggests, a method allowing the user to login without entering a password. For example, instead of asking the user to enter a password, a website can send a short authentication code, such as a one-time password, via email or SMS to verify the user's identity.
 
-A unique implementation of passwordless login is **Magic Links**. If you have ever used services like Slack or Medium, you may have seen those magic links. Instead of sending a verification code like the one above, magic links are sent and when the user clicks on the link, the user is automatically logged in. From a UX perspective, it's really **magical**.
+**Magic Links** is another unique implementation that enables passwordless login. If you have ever used services like Slack or Medium, you may have seen those magic links. Instead of the authentication code as described above, a URL called a magic link is sent to the user. And clicking on the URL will automatically complete the login process. From the user's point of view, it's like **magic**.
 
-In this article, I'm going to discuss two of the (probably) most popular implementations of magic links that I've considered in my recent work 👇.
+I just recently implemented this magic links. Here's how it actually works 👇.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We recently created a passwordless login (aka magic link) on <a href="https://t.co/YJcixgGgra">https://t.co/YJcixgGgra</a>, so please give it a try! <a href="https://t.co/2NRULFw8jG">pic.twitter.com/2NRULFw8jG</a></p>&mdash; Tatsuya Oiwa (@tatsuyaoiw) <a href="https://twitter.com/tatsuyaoiw/status/1275667734454579201?ref_src=twsrc%5Etfw">June 24, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-## Stateful Implementation
+The overall communication flow between the user and the system is as follows.
 
-The first is a stateful implementation, in which the server generates a random string of characters as an authentication token, which is then stored in a server-side data store to enable token verification. The actual flow is as follows.
+1. *User*: Press the Send Magic Link button.
+2. *System* : Upon receiving a request from a user, the system generates an authentication token that is unique to that user and includes the generated token in the URL of the magic link and sends it to the user by email.
+3. *User* : Click on the magic link URL from the email inbox.
+4. *System*: Extracts and verifies the token in the magic link and returns the authenticated status to the user if the token is valid.
 
-1. *User*: Press the send button on the magic link.
-2. *Server* : Generate a random string token upon receiving the request from the user and store it in the data store with an expiration date. Included the generated token in the URL of the magic link and email it to the user.
-3. *User* : Click on the magic link in the email.
-4. *Server*: Check the token and if it's valid, the authenticated status is returned to the user.
+## Implementing the Magic Links
 
-## Stateless Implementation
+The core of the implementation of magic links is **#2 token generation** and **#4 token validation** part. These implementations fall into two broad categories, **stateful implementations** and **stateless implementations**.
 
-The other is a stateless implementation using signed tokens.
+## Stateful Implementations
 
-1. *User*: Press the send button on the magic link.
-2. *Server* : Generate a signed authentication token upon receiving the request from the user. Include the generated token in the URL of the magic link and email it to the user.
-3. *User*: Click on the magic link from the email.
-4. *Server*: Verify the signature of the token contained in the magic link, and if it's valid, the authenticated status is returned to the user.
+A summary of the stateful implementation is as follows:
 
-The difference between the stateful implementation and the stateless implementation is that the #2 token generation part and the #4 token validation part. In a stateful implementation, the server maintains the information needed to match and verify each generated token. On the other hand, in a stateless implementation, the user information is included in the token string and by verifying the signature of the tokens the server can provider the same functionality as a stateful implementation does. An example of a token implementation to achieve a stateless implementation is [JSON Web Token (JWT)](https://jwt.io/).
+- Generate an authentication token as an arbitrary string (e.g., a random string).
+- Store the generated tokens in the server's data store with an associated user infor and expiration date.
+- Send the generated token with the magic link.
+- Token verification is accomplished by matching the state of the token stored in the server's data store.
+
+## Stateless Implementations
+
+On the other hand, a stateless implementation would look like this:
+
+- Generate an authentication token with user information that is digitally signed.
+- Send the generated token with the magic link.
+- Token verification is accomplished through electronic signature verification.
+
+The biggest difference between the two is that a stateful implementation requires a separate data store on the server side (with each token state on the server side), whereas a stateless implementation does not require that. An example of a token to achieve a stateless implementation is the [JSON Web Token (JWT)](https://jwt.io/).
+
+(In addition to the above, there is also a way to use a third party service that provides password login, including magic links. For example, [Auth0](https://auth0.com/docs/connections/passwordless/guides/email-magic-link) provides the ability to generate magic links, send emails, and validate tokens in one place.)
 
 ## Advantages and Disadvantages
 
-A stateful implementation has the advantages of simpler logic, greater flexibility in token strings, and the ability to revoke issued tokens (if necessary). On the other hand, the additional complexity of the system due to the need for a datastore and potentially causing scalability problemsin the case of handling a large number of requests are disadvantages.
+### Stateful Implementations
 
-A stateless implementation simplifies the system as it does not require a data storeand sppeds up token generation and verification. On the other hand, the implementation of the tokens can be a bit more complex. It's also difficult revoke the tokens once issued.
+- Advantages: Simple logic. High degree of flexibility in token strings. Ability to revoke issued tokens as needed.
+- Disadvantage: Increased complexity of the system due to the need for a data store. Scalability issues arise when handling a large number of requests at the same time.
+
+### Stateless Implementations
+
+- Advantages: No datastore is required. Fast token generation and verification.
+- Disadvantage: The token implementation logic is more complex. Difficulty of revoking issued tokens once issued.
 
 ## Magic Links at Quartz.
 
-At [Quartz](https://qz.com), where I currently work, we adopted JWT as the token for magic links and ECDSA as its signature algorithm. A variety of signature algorithms can be used for JWT, but compared to RSA, which is typical for asymmetric cryptography (e.g., [all Auth0 tokens use RSA256 by default](https://community.auth0.com/t/jwt-signing-algorithms-rs256-vs-hs256/7720/5)), ECDSA is worth considering if you want to generate shorter URLs with magic links, as [ECDSA allows you to reduce the key size (length of the token string) instead of sacrificing processing speed](https://auth0.com/blog/json-web-token-signing-algorithms-overview/#RSA-and-ECDSA-algorithms).
+At [Quartz](https://qz.com), where I currently work, we adopted JWT as the token for magic links and ECDSA as its signature algorithm. A variety of signature algorithms can be used for JWT, but compared to RSA, which is a typical asymmetric encryption algorithm (e.g., [all Auth0 tokens use RSA256 by default](https://community.auth0.com/t/jwt-signing-algorithms-rs256-vs-hs256/7720/5)), ECDSA can generate shorter tokens because [it reduces the key size instead of sacrificing processing speed](https://auth0.com/blog/json-web-token-signing-algorithms-overview/#RSA-and-ECDSA-algorithms).
 
 *日本語版はこちら 👉 [マジックリンクでパスワードレスログインを実現する]({% post_url 2020-06-23-magic-links %})*
