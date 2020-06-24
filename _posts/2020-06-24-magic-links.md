@@ -48,7 +48,7 @@ On the other hand, a stateless implementation would look like this:
 
 The biggest difference between the two is that a stateful implementation requires a separate data store on the server side (with each token state on the server side), whereas a stateless implementation does not require that. An example of a token to achieve a stateless implementation is the [JSON Web Token (JWT)](https://jwt.io/).
 
-(In addition to the above, there is also a way to use a third party service that provides password login, including magic links. For example, [Auth0](https://auth0.com/docs/connections/passwordless/guides/email-magic-link) provides the ability to generate magic links, send emails, and validate tokens in one place.)
+(In addition to the above, there is also a way to use a third party service that provides passwordless login, including magic links. For example, [Auth0](https://auth0.com/docs/connections/passwordless/guides/email-magic-link) provides the ability to generate magic links, send emails, and validate tokens in one place.)
 
 ## Advantages and Disadvantages
 
