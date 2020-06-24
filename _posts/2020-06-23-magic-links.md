@@ -14,7 +14,9 @@ Webサイトでログイン機能を作るとき、一般的にはユーザー�
 
 パスワードレスログインのユニークな実装に**マジックリンク**というものがあります。普段SlackやMediumといったサービスを利用している方なら、一度はこのマジックリンクを目にしたことがあるかもしれません。これはEmailで上記のような認証コードの代わりに、**ログイン用のリンク**を送って、ユーザーがそのリンクをクリックすると自動でログインが完了する、というユーザーから見るとまさに**魔法**のような仕組みです。
 
-この記事では、私が実際にマジックリンクを実装するにあたって検討した中で（おそらく）代表的であろうふたつの実装方法を紹介します。
+この記事では、私が実際にマジックリンクを実装 👇 するにあたって検討した中で（おそらく）代表的であろうふたつの実装方法を紹介します。
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We recently created a passwordless login (aka magic link) on <a href="https://t.co/YJcixgGgra">https://t.co/YJcixgGgra</a>, so please give it a try! <a href="https://t.co/2NRULFw8jG">pic.twitter.com/2NRULFw8jG</a></p>&mdash; Tatsuya Oiwa (@tatsuyaoiw) <a href="https://twitter.com/tatsuyaoiw/status/1275667734454579201?ref_src=twsrc%5Etfw">June 24, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## ステートフルな実装
 

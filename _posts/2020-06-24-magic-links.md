@@ -13,8 +13,10 @@ When creating a login feature on a website, a typical implementaion is to have a
 There is also an alternative way to do it, that is, **Passwordless Login**. Passwordless login is, as the name suggests, a method allowing the user to login without entering their password. For example, a website can send an email or SMS with a verification code to the user to let them logged in.
 
 A unique implementation of passwordless login is **Magic Links**. If you have ever used services like Slack or Medium, you may have seen those magic links. Instead of sending a verification code like the one above, magic links are sent and when the user clicks on the link, the user is automatically logged in. From a UX perspective, it's really **magical**.
-~
-In this article, I'm going to discuss two of the (probably) most popular implementations of magic links that I've considered in my recent work.
+
+In this article, I'm going to discuss two of the (probably) most popular implementations of magic links that I've considered in my recent work 👇.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We recently created a passwordless login (aka magic link) on <a href="https://t.co/YJcixgGgra">https://t.co/YJcixgGgra</a>, so please give it a try! <a href="https://t.co/2NRULFw8jG">pic.twitter.com/2NRULFw8jG</a></p>&mdash; Tatsuya Oiwa (@tatsuyaoiw) <a href="https://twitter.com/tatsuyaoiw/status/1275667734454579201?ref_src=twsrc%5Etfw">June 24, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Stateful Implementation
 
