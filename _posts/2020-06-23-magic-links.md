@@ -45,4 +45,6 @@ Webサイトでログイン機能を作るとき、一般的にはユーザー�
 
 ## Quartzのマジックリンク
 
-私が現在所属するQuartzでは、マジックリンク用のトークンにJWTとその署名アルゴリズムにECDSAを採用しました。JWTには様々な署名アルゴリズムを使用することできますが、非対称暗号で代表的なRSA（例えば[Auth0の全てのトークンはデフォルトでRSA256が採用されている](https://community.auth0.com/t/jwt-signing-algorithms-rs256-vs-hs256/7720/5)）と比較して、[ECDSAでは処理スピードを犠牲にする代わりにキーサイズ（トークン文字列の長さ）を短縮できる](https://auth0.com/blog/json-web-token-signing-algorithms-overview/#RSA-and-ECDSA-algorithms)ため、マジックリンクでより短いURLを生成したい場合、検討する価値があると思います。
+私が現在所属する[Quartz](https://qz.com)では、マジックリンク用のトークンにJWTとその署名アルゴリズムにECDSAを採用しました。JWTには様々な署名アルゴリズムを使用することできますが、非対称暗号で代表的なRSA（例えば[Auth0の全てのトークンはデフォルトでRSA256が採用されている](https://community.auth0.com/t/jwt-signing-algorithms-rs256-vs-hs256/7720/5)）と比較して、[ECDSAでは処理スピードを犠牲にする代わりにキーサイズ（トークン文字列の長さ）を短縮できる](https://auth0.com/blog/json-web-token-signing-algorithms-overview/#RSA-and-ECDSA-algorithms)ため、マジックリンクでより短いURLを生成したい場合、検討する価値があると思います。
+
+*English version is here 👉 [Implementing Passwordless Login with Magic Links]({% post_url 2020-06-24-magic-links %})*
