@@ -12,7 +12,7 @@ When creating a login feature on a website, a typical implementaion is to have a
 
 There is also an alternative way called **Passwordless Login**. A passwordless login is, as the name suggests, a method allowing the user to login without entering a password. For example, instead of asking the user to enter a password, a website can send a short authentication code, such as a one-time password, via email or SMS to verify the user's identity.
 
-**Magic Links** is another unique implementation that enables passwordless login. If you have ever used services like Slack or Medium, you may have seen those magic links. Instead of the authentication code as described above, a URL called a magic link is sent to the user. And clicking on the URL will automatically complete the login process. From the user's point of view, it's like **magic**.
+**Magic Links** is another unique implementation that enables passwordless login. If you have ever used services like Slack or Medium, you may have seen those magic links. Instead of the authentication code as described above, a URL called a magic link is sent to the user. And clicking on the URL will automatically complete the login process. From the user's point of view, it works like **magic**.
 
 I just recently implemented this magic links. Here's how it actually works 👇.
 
