@@ -34,7 +34,7 @@ The core of the implementation of magic links is **#2 token generation** and **#
 A summary of the stateful implementation is as follows:
 
 - Generate an authentication token as an arbitrary string (e.g., a random string).
-- Store the generated tokens in the server's data store with an associated user infor and expiration date.
+- Store the generated tokens in the server's data store with an associated user info and expiration date.
 - Send the generated token with the magic link.
 - Token verification is accomplished by matching the state of the token stored in the server's data store.
 
