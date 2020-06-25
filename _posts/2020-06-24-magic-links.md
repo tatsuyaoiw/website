@@ -8,7 +8,7 @@ author: Tatsuya Oiwa
 tags: [English]
 ---
 
-When creating a login feature on a website, a typical implementaion is to have a form with a combination of a username and password, or to integrate with external platforms such as Google and Facebook using [OAuth](https://oauth.net/) authentication mechanism.
+When creating a login feature on a website, a typical implementation is to have a form with a combination of a username and password, or to integrate with external platforms such as Google and Facebook using [OAuth](https://oauth.net/) authentication mechanism.
 
 There is also an alternative way called **Passwordless Login**. A passwordless login is, as the name suggests, a method allowing the user to login without entering a password. For example, instead of asking the user to enter a password, a website can send a short authentication code, such as a one-time password, via email or SMS to verify the user's identity.
 
