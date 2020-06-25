@@ -62,7 +62,7 @@ The biggest difference between the two is that a stateful implementation require
 - Advantages: No datastore is required. Fast token generation and verification.
 - Disadvantage: The token implementation logic is more complex. Difficulty of revoking issued tokens.
 
-## Magic Links at Quartz.
+## Magic Links at Quartz
 
 At [Quartz](https://qz.com), where I currently work, we adopted JWT as the token for magic links and ECDSA as its signature algorithm. A variety of signature algorithms can be used for JWT, but compared to RSA, which is a typical asymmetric encryption algorithm (e.g., [all Auth0 tokens use RSA256 by default](https://community.auth0.com/t/jwt-signing-algorithms-rs256-vs-hs256/7720/5)), ECDSA can generate shorter tokens because [it reduces the key size instead of sacrificing processing speed](https://auth0.com/blog/json-web-token-signing-algorithms-overview/#RSA-and-ECDSA-algorithms).
 
