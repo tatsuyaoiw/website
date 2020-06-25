@@ -8,13 +8,13 @@ author: Tatsuya Oiwa
 tags: [English]
 ---
 
-When creating a login feature on a website, a typical implementation is to have a form with a combination of a username and password, or to integrate with external platforms such as Google and Facebook using [OAuth](https://oauth.net/) authentication mechanism.
+When creating a login feature on a website, a typical implementation is to have a form with a combination of a username and password, or to integrate with external platforms such as Google and Facebook using the [OAuth](https://oauth.net/) authentication mechanism.
 
 There is also an alternative way called **Passwordless Login**. A passwordless login is, as the name suggests, a method allowing the user to login without entering a password. For example, instead of asking the user to enter a password, a website can send a short authentication code, such as a one-time password, via email or SMS to verify the user's identity.
 
 **Magic Links** is another unique implementation that enables passwordless login. If you have ever used services like Slack or Medium, you may have seen those magic links. Instead of the authentication code as described above, a URL called a magic link is sent to the user. And clicking on the URL will automatically complete the login process. From the user's point of view, it works like **magic**.
 
-I just recently implemented this magic links. Here's how it actually works 👇.
+I just recently implemented these magic links. Here's how it actually works 👇.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We recently created a passwordless login (aka magic link) on <a href="https://t.co/YJcixgGgra">https://t.co/YJcixgGgra</a>, so please give it a try! <a href="https://t.co/2NRULFw8jG">pic.twitter.com/2NRULFw8jG</a></p>&mdash; Tatsuya Oiwa (@tatsuyaoiw) <a href="https://twitter.com/tatsuyaoiw/status/1275667734454579201?ref_src=twsrc%5Etfw">June 24, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -27,7 +27,7 @@ The overall communication flow between the user and the system is as follows.
 
 ## Implementing the Magic Links
 
-The core of the implementation of magic links are **#2 token generation** and **#4 token verification** parts. These implementations fall into two broad categories, **stateful implementations** and **stateless implementations**.
+The core of the implementation of magic links is **#2 token generation** and **#4 token verification** parts. These implementations fall into two broad categories, **stateful implementations** and **stateless implementations**.
 
 ## Stateful Implementations
 
