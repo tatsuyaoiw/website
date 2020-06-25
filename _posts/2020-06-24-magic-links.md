@@ -54,7 +54,7 @@ The biggest difference between the two is that a stateful implementation require
 
 ### Stateful Implementations
 
-- Advantages: Simple logic. Flexibile token strings. Ability to revoke issued tokens as needed.
+- Advantages: Simple logic. Flexible token strings. Ability to revoke issued tokens as needed.
 - Disadvantage: Increased complexity of the system due to the need for a data store. Scalability issues arise when handling a large number of requests at the same time.
 
 ### Stateless Implementations
