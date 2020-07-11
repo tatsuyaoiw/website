@@ -14,14 +14,10 @@ default_img: /assets/images/me.jpg
 social:
   - name: twitter
     url: https://twitter.com/tatsuyaoiw
-  # - name: instagram
-  #   url: https://www.instagram.com/tatsuyaoiw/
   - name: linkedin
     url: https://www.linkedin.com/in/tatsuyaoiw/
   - name: github
     url: https://github.com/tatsuyaoiw
-  # - name: codepen
-  #   url: https://codepen.io/tatsuyaoiw/
 
 # Contact settings
 # contact_img: /assets/images/placeholder-28.jpg
