@@ -6,7 +6,7 @@ module.exports = {
       summary: `a software engineer from Japan currently living and working in New York.`,
     },
     description: `Tatsuya Oiwa's personal blog.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    siteUrl: `https://tatsuyaoiw.com/`,
     social: {
       twitter: `tatsuyaoiw`,
     },
