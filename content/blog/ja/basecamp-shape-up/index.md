@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BasecampのShape Upを実践してみた
-date: 2021-01-02 21:38
+date: 2021-01-04 01:13
 published: false
 author: Tatsuya Oiwa
 tags: [Japanese]
