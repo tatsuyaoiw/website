@@ -2,7 +2,6 @@
 layout: post
 title: ニューヨークに移住するときにやったこと（3ヶ月後）
 date: 2019-08-20 22:19
-published: true
 image: /assets/images/statue-of-liberty.jpg
 author: Tatsuya Oiwa
 tags: [Japanese]

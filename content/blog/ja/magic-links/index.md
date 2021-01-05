@@ -2,7 +2,6 @@
 layout: post
 title: マジックリンクでパスワードレスログインを実現する
 date: 2020-06-23 20:07
-published: true
 image: /assets/images/2020-06-23-magic-links.png
 author: Tatsuya Oiwa
 tags: [Japanese]

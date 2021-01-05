@@ -2,7 +2,6 @@
 layout: post
 title: Implementing Passwordless Login with Magic Links
 date: 2020-06-24 00:52
-published: true
 image: /assets/images/2020-06-23-magic-links.png
 author: Tatsuya Oiwa
 tags: [English]
