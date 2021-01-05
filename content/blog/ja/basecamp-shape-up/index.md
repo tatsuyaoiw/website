@@ -7,13 +7,15 @@ author: Tatsuya Oiwa
 tags: [Japanese]
 ---
 
-[Basecamp](https://basecamp.com/)というプロジェクト管理のためのソフトウェアサービスを提供している会社がある。つい最近、[HEY](https://hey.com/)というEmailのアプリも登場した。Basecampの前身は[37signals](https://37signals.com/)という会社で「小さなチーム、大きな仕事」（原著は「[Getting Real](https://basecamp.com/gettingreal)」）という書籍の著者である[Jason Fried](https://twitter.com/jasonfried)と[David Heinemeier Hansson (DHH)](https://twitter.com/dhh)が在籍していることでも知られている。
+[Basecamp](https://basecamp.com/)というプロジェクト管理のためのソフトウェアサービスを提供している会社がある。つい最近、[HEY](https://hey.com/)というEmailのアプリもこの会社の新たなサービスとして登場した。
 
-そのBasecampが2019年に新たに公開したプロダクト開発メソッドが[Shape Up](https://basecamp.com/shapeup)だ。Shape Upがどういったメソッドなのかについては、英語の[原文](https://basecamp.com/shapeup)が無料で公開されているのでそちらを読むのが良い。BasecampのCTOで（Ruby on Railsの作者でも）ある[DHHのツイート](https://twitter.com/dhh/status/1148963942116597766)をベースにShape Upを3行でまとめると、次のようなものだ。
+Basecampといえば、その前身は[37signals](https://37signals.com/)という会社で、[Getting Real](https://basecamp.com/gettingreal)（日本語版: 小さなチーム、大きな仕事）という書籍はそこから出版されている。Getting Realの著者、[Jason Fried](https://twitter.com/jasonfried)と[David Heinemeier Hansson (DHH)](https://twitter.com/dhh)（Ruby on Railsの作者としても知られる）は今もBasecampに在籍している。
+
+そのBasecampが2019年に新たに公開したプロダクト開発メソッドが[Shape Up](https://basecamp.com/shapeup)だ。Shape Upが何なのかについては、英語の[原文](https://basecamp.com/shapeup)が無料で公開されているのでそちらを読むのがベストだと思う。とはいえ、なかなかのボリュームなのでさらっと要約だけすると、次のようなものだ（ほぼ[DHHのツイート](https://twitter.com/dhh/status/1148963942116597766)をまるっとコピーした）。
 
 - Basecampが自社のソフトウェア開発で採用している。
 - 6週間の開発サイクル、見積もりではなく予算、タスクではなくプロジェクト。
-- 罪悪感を感じるバックログや永遠に続くスプリント、進捗確認のための会議の放棄。
+- 罪悪感を感じるバックログや永遠に続くスプリント、進捗確認のための会議はいらない。
 
 ## Shape Upをやってみた
 
