@@ -35,7 +35,7 @@ const AboutPage = ({ location }) => {
       <SEO title="About" />
       <header>
         <h1>Hi there, I’m Tatsuya <span role="img" aria-label="wave">👋</span></h1>
-        <h2>I’m a software engineer from Japan currently living and working in Brooklyn, New York.</h2>
+        <h2>Software engineer based in Brooklyn. Originally from Japan. Raising two little girls.</h2>
       </header>
 	    <p>I’m a senior backend engineer at <a href="https://qz.com">Quartz</a>, where I lead the design and development of the backend systems that drive the Quartz’s website and apps. This work includes the launch of <a href="https://qz.com/subscribe/">Quartz membership</a>, Quartz’s first paid subscription service, and the U.S. expansion of <a href="https://www.producthunt.com/posts/newspicks">NewsPicks</a>, Japan’s leading business news platform, which was later <a href="https://qz.com/1319054/quartz-sold-by-atlantic-media-to-uzabase-of-japan/">rebranded</a> and integrated into Quartz.</p>
       <p>Prior to coming to the news media industry, I was a backend engineer at <a href="https://www.gilt.jp/">Gilt</a>, a flash sale site specializing in luxury apparel, where I developed and maintained various user-facing e-commerce functionalities, and <a href="https://global.rakuten.com/corp/about/">Rakuten</a>, Japan’s largest e-commerce platform, where I was building an automated deployment systems for a large-scale, self-service, distributed search platform.</p>
