@@ -35,7 +35,7 @@ const AboutPage = ({ location }) => {
       <SEO title="About" />
       <header>
         <h1>Hi there, I’m Tatsuya <span role="img" aria-label="wave">👋</span></h1>
-        <h2>Senior Developer at Shopify <span role="img" aria-label="shopping_bags">🛍️</span> Raising two little girls in Toronto <span role="img" aria-label="canada">🇨🇦</span> Originally from Japan <span role="img" aria-label="japan">🇯🇵</span></h2>
+        <h2>Senior Developer at Shopify <span role="img" aria-label="shopping_bags">🛍️</span> Toronto ⇜ New York ⇜ Tokyo <span role="img" aria-label="canada">🇨🇦</span><span role="img" aria-label="us">🇺🇸</span><span role="img" aria-label="japan">🇯🇵</span></h2>
       </header>
 
       <p>Tatsuya Oiwa is a software developer living in Toronto. He is a Senior Developer at <a href="https://www.shopify.com">Shopify</a>, where he works on things to <a href="https://www.shopify.com/careers/culture">make commerce better for everyone</a>. Like other Shopify folks around the world, he is currently working remotely from home. When he is not working, he enjoys Toronto’s chilly weather and diverse dining scene with his family.</p>
