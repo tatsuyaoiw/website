@@ -46,7 +46,7 @@ const AboutPage = ({ location }) => {
 
       <p>With his extensive work experience in diverse environments, he specializes in solving problems in a way that minimizes risk and maximizes value. He turns problems over and over in his mind until he finds an elegant solution that seemed impossible from the outset. He values generosity and empathy, and is always willing to set aside his own work to help others who are struggling. He brings enthusiasm to everything he does with his incessant intellectual curiosity.</p>
 
-      <p>Born and raised in a <a href="https://en.wikipedia.org/wiki/Taketoyo">small waterfront town in Aichi, Japan</a>, he moved across the Pacific Ocean to where he is today. His next life goal is to live and work on as many continents and islands as possible.</p>
+      <p>Born and raised in a <a href="https://en.wikipedia.org/wiki/Taketoyo">small waterfront town in Aichi, Japan</a>, he moved across the Pacific Ocean to where he is today. His next life goal is to live on and work from as many continents and islands as possible.</p>
 
       <p>You can also find me on <a href="https://twitter.com/tatsuyaoiw">Twitter</a>, <a href="https://instagram.com/tatsuyaoiw">Instagram</a> or <a href="https://www.linkedin.com/in/tatsuyaoiw">LinkedIn</a>. Here’s my <a href="https://github.com/tatsuyaoiw/resume/blob/master/resume-2021.pdf">resume</a>.</p>
 
