@@ -35,7 +35,6 @@ const AboutPage = ({ location }) => {
       <SEO title="About" />
       <header>
         <h1>Hi there, I’m Tatsuya <span role="img" aria-label="wave">👋</span></h1>
-        {/* <h2>Senior Developer at Shopify <span role="img" aria-label="shopping_bags">🛍️</span> Toronto ⇜ New York ⇜ Tokyo <span role="img" aria-label="canada">🇨🇦</span><span role="img" aria-label="us">🇺🇸</span><span role="img" aria-label="japan">🇯🇵</span></h2> */}
         <h2>Senior Developer at Shopify <span role="img" aria-label="shopping_bags">🛍️</span> Live and work in Toronto <span role="img" aria-label="canada">🇨🇦</span> Previously in New York <span role="img" aria-label="us">🇺🇸</span> and Tokyo <span role="img" aria-label="japan">🇯🇵</span></h2>
       </header>
 
